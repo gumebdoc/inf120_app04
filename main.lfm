@@ -1,0 +1,557 @@
+object FormMain: TFormMain
+  Left = 200
+  Height = 730
+  Top = 80
+  Width = 1040
+  Caption = 'UAGRM - FICCT | INF120 Programacion I | Aplicacion U4: VectorPlus'
+  ClientHeight = 730
+  ClientWidth = 1040
+  Color = clBtnFace
+  Font.Color = clBlack
+  Font.Height = -13
+  Font.Name = 'Segoe UI'
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  LCLVersion = '2.2.6.0'
+  object LabelTitulo: TLabel
+    Left = 20
+    Height = 25
+    Top = 10
+    Width = 620
+    Caption = 'UAGRM - FICCT | Programación I (INF120) - Aplicación U4: VectorPlus'
+    Font.Color = clNavy
+    Font.Height = -18
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object LabelSubtitulo: TLabel
+    Left = 20
+    Height = 17
+    Top = 38
+    Width = 530
+    Caption = 'Técnicas Algorítmicas: Cortes de Control, Intercalación, Purga y División de Vectores'
+    Font.Color = clGray
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    ParentColor = False
+    ParentFont = False
+  end
+  object LabelAutor: TLabel
+    Left = 650
+    Height = 17
+    Top = 15
+    Width = 360
+    Alignment = taRightJustify
+    Caption = 'Estudiante: Gustavo Melgar Baldivieso | Reg: 213195623'
+    Font.Color = clMaroon
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object GroupBoxA: TGroupBox
+    Left = 20
+    Height = 180
+    Top = 65
+    Width = 590
+    Caption = ' Vector A (Principal) '
+    ClientHeight = 158
+    ClientWidth = 586
+    Font.Height = -12
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+    object LabelGridA: TLabel
+      Left = 12
+      Height = 15
+      Top = 4
+      Width = 55
+      Caption = 'Contenido:'
+      Font.Height = -12
+      ParentColor = False
+      ParentFont = False
+    end
+    object StringGridA: TStringGrid
+      Left = 12
+      Height = 52
+      Top = 22
+      Width = 560
+      ColCount = 1
+      DefaultColWidth = 36
+      DefaultRowHeight = 22
+      FixedCols = 0
+      FixedRows = 0
+      Font.Height = -11
+      ParentFont = False
+      RowCount = 2
+      ScrollBars = ssHorizontal
+      TabOrder = 0
+    end
+    object LabelElemA: TLabel
+      Left = 12
+      Height = 15
+      Top = 82
+      Width = 53
+      Caption = 'Elemento:'
+      Font.Height = -12
+      ParentColor = False
+      ParentFont = False
+    end
+    object EditElemA: TEdit
+      Left = 70
+      Height = 23
+      Top = 78
+      Width = 55
+      Font.Height = -12
+      ParentFont = False
+      TabOrder = 1
+    end
+    object LabelPosA: TLabel
+      Left = 135
+      Height = 15
+      Top = 82
+      Width = 47
+      Caption = 'Posición:'
+      Font.Height = -12
+      ParentColor = False
+      ParentFont = False
+    end
+    object EditPosA: TEdit
+      Left = 188
+      Height = 23
+      Top = 78
+      Width = 45
+      Font.Height = -12
+      ParentFont = False
+      TabOrder = 2
+    end
+    object ButtonAddA: TButton
+      Left = 245
+      Height = 26
+      Top = 77
+      Width = 75
+      Caption = 'Adicionar'
+      Font.Height = -12
+      OnClick = ButtonAddAClick
+      ParentFont = False
+      TabOrder = 3
+    end
+    object ButtonInsA: TButton
+      Left = 326
+      Height = 26
+      Top = 77
+      Width = 75
+      Caption = 'Insertar'
+      Font.Height = -12
+      OnClick = ButtonInsAClick
+      ParentFont = False
+      TabOrder = 4
+    end
+    object ButtonRemA: TButton
+      Left = 407
+      Height = 26
+      Top = 77
+      Width = 75
+      Caption = 'Remover'
+      Font.Height = -12
+      OnClick = ButtonRemAClick
+      ParentFont = False
+      TabOrder = 5
+    end
+    object ButtonClearA: TButton
+      Left = 488
+      Height = 26
+      Top = 77
+      Width = 84
+      Caption = 'Limpiar A'
+      Font.Height = -12
+      OnClick = ButtonClearAClick
+      ParentFont = False
+      TabOrder = 6
+    end
+    object LabelTextoA: TLabel
+      Left = 12
+      Height = 15
+      Top = 118
+      Width = 88
+      Caption = 'Carga en Bloque:'
+      Font.Height = -12
+      ParentColor = False
+      ParentFont = False
+    end
+    object EditTextoA: TEdit
+      Left = 105
+      Height = 23
+      Top = 114
+      Width = 320
+      Font.Height = -12
+      ParentFont = False
+      TabOrder = 7
+    end
+    object ButtonCargarTextoA: TButton
+      Left = 432
+      Height = 26
+      Top = 113
+      Width = 65
+      Caption = 'Cargar'
+      Font.Height = -12
+      OnClick = ButtonCargarTextoAClick
+      ParentFont = False
+      TabOrder = 8
+    end
+    object ButtonEjemploA: TButton
+      Left = 502
+      Height = 26
+      Top = 113
+      Width = 70
+      Caption = 'Ejemplo'
+      Font.Height = -12
+      OnClick = ButtonEjemploAClick
+      ParentFont = False
+      TabOrder = 9
+    end
+  end
+  object GroupBoxB: TGroupBox
+    Left = 20
+    Height = 145
+    Top = 250
+    Width = 590
+    Caption = ' Vector B (Para Intercalar) '
+    ClientHeight = 123
+    ClientWidth = 586
+    Font.Height = -12
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+    object LabelGridB: TLabel
+      Left = 12
+      Height = 15
+      Top = 4
+      Width = 55
+      Caption = 'Contenido:'
+      Font.Height = -12
+      ParentColor = False
+      ParentFont = False
+    end
+    object StringGridB: TStringGrid
+      Left = 12
+      Height = 52
+      Top = 22
+      Width = 560
+      ColCount = 1
+      DefaultColWidth = 36
+      DefaultRowHeight = 22
+      FixedCols = 0
+      FixedRows = 0
+      Font.Height = -11
+      ParentFont = False
+      RowCount = 2
+      ScrollBars = ssHorizontal
+      TabOrder = 0
+    end
+    object LabelElemB: TLabel
+      Left = 12
+      Height = 15
+      Top = 85
+      Width = 53
+      Caption = 'Elemento:'
+      Font.Height = -12
+      ParentColor = False
+      ParentFont = False
+    end
+    object EditElemB: TEdit
+      Left = 70
+      Height = 23
+      Top = 81
+      Width = 55
+      Font.Height = -12
+      ParentFont = False
+      TabOrder = 1
+    end
+    object ButtonAddB: TButton
+      Left = 132
+      Height = 26
+      Top = 80
+      Width = 75
+      Caption = 'Adicionar'
+      Font.Height = -12
+      OnClick = ButtonAddBClick
+      ParentFont = False
+      TabOrder = 2
+    end
+    object ButtonClearB: TButton
+      Left = 212
+      Height = 26
+      Top = 80
+      Width = 75
+      Caption = 'Limpiar B'
+      Font.Height = -12
+      OnClick = ButtonClearBClick
+      ParentFont = False
+      TabOrder = 3
+    end
+    object LabelTextoB: TLabel
+      Left = 295
+      Height = 15
+      Top = 85
+      Width = 37
+      Caption = 'Texto:'
+      Font.Height = -12
+      ParentColor = False
+      ParentFont = False
+    end
+    object EditTextoB: TEdit
+      Left = 336
+      Height = 23
+      Top = 81
+      Width = 110
+      Font.Height = -12
+      ParentFont = False
+      TabOrder = 4
+    end
+    object ButtonCargarTextoB: TButton
+      Left = 452
+      Height = 26
+      Top = 80
+      Width = 58
+      Caption = 'Cargar'
+      Font.Height = -12
+      OnClick = ButtonCargarTextoBClick
+      ParentFont = False
+      TabOrder = 5
+    end
+    object ButtonEjemploB: TButton
+      Left = 514
+      Height = 26
+      Top = 80
+      Width = 58
+      Caption = 'Ejemplo'
+      Font.Height = -12
+      OnClick = ButtonEjemploBClick
+      ParentFont = False
+      TabOrder = 6
+    end
+  end
+  object GroupBoxOperaciones: TGroupBox
+    Left = 625
+    Height = 330
+    Top = 65
+    Width = 395
+    Caption = ' Operaciones del Práctico U4 '
+    ClientHeight = 308
+    ClientWidth = 391
+    Font.Height = -12
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+    object ButtonOp1: TButton
+      Left = 16
+      Height = 34
+      Top = 10
+      Width = 235
+      Caption = '1. Cantidad Cortes Control'
+      Font.Height = -12
+      Font.Style = [fsBold]
+      OnClick = ButtonOp1Click
+      ParentFont = False
+      TabOrder = 0
+    end
+    object EditCortesA: TEdit
+      Left = 260
+      Height = 28
+      Top = 13
+      Width = 115
+      Font.Color = clNavy
+      Font.Height = -13
+      Font.Style = [fsBold]
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 1
+    end
+    object ButtonOp2: TButton
+      Left = 16
+      Height = 34
+      Top = 52
+      Width = 359
+      Caption = '2. Cantidad Elementos entre Cortes de Control'
+      Font.Height = -12
+      OnClick = ButtonOp2Click
+      ParentFont = False
+      TabOrder = 2
+    end
+    object ButtonOp3: TButton
+      Left = 16
+      Height = 34
+      Top = 94
+      Width = 359
+      Caption = '3. Dividir un Vector en dos (Par e Impar)'
+      Font.Height = -12
+      OnClick = ButtonOp3Click
+      ParentFont = False
+      TabOrder = 3
+    end
+    object ButtonOp4: TButton
+      Left = 16
+      Height = 34
+      Top = 136
+      Width = 359
+      Caption = '4. Intercalar dos Vectores (Un elemento A y B)'
+      Font.Height = -12
+      OnClick = ButtonOp4Click
+      ParentFont = False
+      TabOrder = 4
+    end
+    object ButtonOp5: TButton
+      Left = 16
+      Height = 34
+      Top = 178
+      Width = 359
+      Caption = '5. Purgar Elementos usando Cortes de Control'
+      Font.Height = -12
+      OnClick = ButtonOp5Click
+      ParentFont = False
+      TabOrder = 5
+    end
+    object ButtonDemo: TButton
+      Left = 16
+      Height = 36
+      Top = 224
+      Width = 220
+      Caption = '▶ Ejecutar Demostración Completa'
+      Font.Color = clGreen
+      Font.Height = -12
+      Font.Style = [fsBold]
+      OnClick = ButtonDemoClick
+      ParentFont = False
+      TabOrder = 6
+    end
+    object ButtonLimpiarTodo: TButton
+      Left = 246
+      Height = 36
+      Top = 224
+      Width = 129
+      Caption = 'Limpiar Todo'
+      Font.Height = -12
+      OnClick = ButtonLimpiarTodoClick
+      ParentFont = False
+      TabOrder = 7
+    end
+  end
+  object GroupBoxResultados: TGroupBox
+    Left = 20
+    Height = 315
+    Top = 400
+    Width = 1000
+    Caption = ' Visualización de Resultados de Vectores y Detalle de Cortes '
+    ClientHeight = 293
+    ClientWidth = 996
+    Font.Height = -12
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+    object LabelGridResultado: TLabel
+      Left = 15
+      Height = 15
+      Top = 4
+      Width = 237
+      Caption = 'Vector Resultado (Intercalado / Purgado):'
+      Font.Height = -12
+      ParentColor = False
+      ParentFont = False
+    end
+    object StringGridResultado: TStringGrid
+      Left = 15
+      Height = 50
+      Top = 22
+      Width = 530
+      ColCount = 1
+      DefaultColWidth = 36
+      DefaultRowHeight = 22
+      FixedCols = 0
+      FixedRows = 0
+      Font.Height = -11
+      ParentFont = False
+      RowCount = 2
+      ScrollBars = ssHorizontal
+      TabOrder = 0
+    end
+    object LabelGridPar: TLabel
+      Left = 15
+      Height = 15
+      Top = 76
+      Width = 135
+      Caption = 'Vector Pares (División):'
+      Font.Height = -12
+      ParentColor = False
+      ParentFont = False
+    end
+    object StringGridPar: TStringGrid
+      Left = 15
+      Height = 50
+      Top = 94
+      Width = 530
+      ColCount = 1
+      DefaultColWidth = 36
+      DefaultRowHeight = 22
+      FixedCols = 0
+      FixedRows = 0
+      Font.Height = -11
+      ParentFont = False
+      RowCount = 2
+      ScrollBars = ssHorizontal
+      TabOrder = 1
+    end
+    object LabelGridImpar: TLabel
+      Left = 15
+      Height = 15
+      Top = 148
+      Width = 149
+      Caption = 'Vector Impares (División):'
+      Font.Height = -12
+      ParentColor = False
+      ParentFont = False
+    end
+    object StringGridImpar: TStringGrid
+      Left = 15
+      Height = 50
+      Top = 166
+      Width = 530
+      ColCount = 1
+      DefaultColWidth = 36
+      DefaultRowHeight = 22
+      FixedCols = 0
+      FixedRows = 0
+      Font.Height = -11
+      ParentFont = False
+      RowCount = 2
+      ScrollBars = ssHorizontal
+      TabOrder = 2
+    end
+    object LabelReporte: TLabel
+      Left = 560
+      Height = 15
+      Top = 4
+      Width = 236
+      Caption = 'Reporte y Desglose de Cortes de Control:'
+      Font.Height = -12
+      ParentColor = False
+      ParentFont = False
+    end
+    object MemoReporte: TMemo
+      Left = 560
+      Height = 194
+      Top = 22
+      Width = 420
+      Font.Height = -11
+      Font.Name = 'Consolas'
+      ParentFont = False
+      ReadOnly = True
+      ScrollBars = ssAutoBoth
+      TabOrder = 3
+    end
+  end
+end
